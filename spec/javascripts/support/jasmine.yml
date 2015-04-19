@@ -11,7 +11,10 @@
 #   - dist/**/*.js
 #
 src_files:
-  - public/js/**/*.js
+  - http://code.jquery.com/jquery-latest.js
+  - app/public/js/**/*.js
+  - lib/jasmine-jquery.js
+  - lib/mock-ajax.js
 
 # stylesheets
 #

@@ -1,0 +1,15 @@
+<head>
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="message"><%= erb :welcome_back if @user %></div>
+    </nav>
+  </header>
+  <%= yield %>
+  <footer>
+  </footer>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="/js/sessions.js"></script>
+  <script src="/js/main.js"></script>
+</body>

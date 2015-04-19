@@ -1,0 +1,4 @@
+<% user = params[:username] || @user.username %>
+<% if user %>
+  Hello again, <span id="username"><%= user %></span>
+<% end %>

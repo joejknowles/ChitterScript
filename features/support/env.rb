@@ -10,8 +10,14 @@ require 'rspec'
 
 Capybara.app = ChitterScript
 
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
 class ChitterScriptWorld
   include Capybara::DSL
+  Capybara.default_driver = ENV['BROWSER_ENV'].to_sym
+  Capybara.javascript_driver = :chrome
   include RSpec::Expectations
   include RSpec::Matchers
 end
