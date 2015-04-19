@@ -5,3 +5,4 @@ DataMapper.setup(:default, local)
 require_relative 'models/user'
 require_relative 'models/cheep'
 DataMapper.finalize
+DataMapper.auto_upgrade!
