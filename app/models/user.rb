@@ -4,7 +4,7 @@ class User
   property :id, Serial
   property :username, String, unique: true
   property :password_digest, BCryptHash
-
+  has n, :cheeps, through: Resource
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

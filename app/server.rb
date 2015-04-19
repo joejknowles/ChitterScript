@@ -3,6 +3,7 @@ require_relative 'data_mapper_setup'
 
 class ChitterScript < Sinatra::Base
   get '/' do
+    @cheeps = Cheep.all
     @user = User.first(id: session[:user_id])
     erb :index
   end

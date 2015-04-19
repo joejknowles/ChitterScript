@@ -1,3 +1,5 @@
 <div id="cheeps-wrapper">
-
+  <% @cheeps.each do |cheep| %>
+    <%= erb :cheep, layout: false, locals: { cheep: cheep } %>
+  <% end %>
 </div>
