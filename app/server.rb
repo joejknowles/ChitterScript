@@ -11,3 +11,4 @@ class ChitterScript < Sinatra::Base
 end
 
 require_relative 'controllers/user_management'
+require_relative 'controllers/cheeping'
