@@ -14,6 +14,8 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
+ENV['BROWSER_ENV'] ||= 'selenium'
+
 class ChitterScriptWorld
   include Capybara::DSL
   Capybara.default_driver = ENV['BROWSER_ENV'].to_sym

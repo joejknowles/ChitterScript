@@ -24,6 +24,7 @@ $register_form.on('submit', function (event) {
     $register_form.hide();
     $sign_in_form.hide();
     $sign_out_form.show();
+    $cheep_form.show();
     window.session = new Session(username)
   }).fail(function (data) {
     $('#message').text(data.responseText);
@@ -43,6 +44,7 @@ $sign_in_form.on('submit', function (event) {
     $register_form.hide();
     $sign_in_form.hide();
     $sign_out_form.show();
+    $cheep_form.show();
     window.session = new Session(username)
   }).fail(function (data) {
     $('#message').text(data.responseText);
