@@ -12,3 +12,4 @@ before_install:
 
 env:
   - DB=postgres
+  - TEST=travis

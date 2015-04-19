@@ -13,6 +13,10 @@ RSpec::Core::RakeTask.new :spec
 require 'jasmine'
 load 'jasmine/tasks/jasmine.rake'
 
+if ENV['TEST'] == 'travis'
+  task default: [:migrate, :set_chrome, :cop, :features]
+end
+
 task default: [:set_chrome, :cop, :features]
 
 task :set_chrome do
@@ -42,4 +46,8 @@ task :migrate_test do
   require './app/data_mapper_setup'
   DataMapper.auto_migrate!
   puts "test DB upgraded, data may be lost"
+end
+
+if ENV['TEST'] == 'travis'
+  task default: [:migrate, :set_chrome, :cop, :features]
 end
