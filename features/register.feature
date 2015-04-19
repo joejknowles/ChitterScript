@@ -18,3 +18,6 @@ Feature: User signs up for Chitter
     And "joejknowles" signs up
     Then I see "Username is already taken"
 
+  Scenario: Don't see sign out when not signed in
+    When I sign out
+    Then I don't see "Sign out"

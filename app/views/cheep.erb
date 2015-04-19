@@ -1,6 +1,9 @@
-<div id="author">
+<div class="cheep-author">
   <%= cheep.user.username %> cheeped:
 </div>
-<div id="cheep-message">
+<div class="cheep-message">
   <%= cheep.message %>
+</div>
+<div class="cheep-time">
+  <%= "#{(Time.now - cheep.created_at).floor / 60} minutes ago" %>
 </div>

@@ -1,14 +1,16 @@
 var $register_form = $('#register');
 var $sign_in_form = $('#sign-in');
 var $sign_out_form = $('#sign-out');
+var $cheep_form = $('#send-cheep')
 
-$('#username').html(function () {
-  if($(this).length > 0) {
-    window.session = new Session($(this).text);
-    $register_form.hide();
-    $sign_in_form.hide();
-  }
-});
+if ($('#username').length > 0) {
+  window.session = new Session($(this).text);
+  $register_form.hide();
+  $sign_in_form.hide();
+} else {
+  $sign_out_form.hide();
+  $cheep_form.hide();
+}
 
 $register_form.on('submit', function (event) {
   event.preventDefault;
@@ -63,6 +65,7 @@ $sign_out_form.on('submit', function (event) {
     $register_form.show();
     $sign_in_form.show();
     $sign_out_form.hide();
+    $cheep_form.hide();
     window.session.leave();
   });
   return false;

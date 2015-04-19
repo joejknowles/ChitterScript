@@ -8,7 +8,7 @@ $cheep_form.on('submit', function (event) {
     method: 'post',
     data: $(this).serialize()
   }).done(function (cheep) {
-    $cheep_area.append(cheep);
+    $cheep_area.prepend(cheep);
   });
   return false;
 });

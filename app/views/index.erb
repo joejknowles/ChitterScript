@@ -20,4 +20,4 @@
   <input id="enter-cheep" type="text" name="cheep">
   <button id="cheep-button">Cheep</button>
 </form>
-<%= erb :cheeps %>
+<%= erb :cheeps, locals: { cheeps: @cheeps } %>
