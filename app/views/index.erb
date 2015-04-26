@@ -5,6 +5,7 @@
     <button id="cheep-button">Cheep</button>
   </form>
   <%= erb :cheeps, locals: { cheeps: @cheeps } %>
+  <span class="clear"></span>
 </div>
 <div class="sidebar">
   <%= erb :_sidebar, locals: { user: @user } %>

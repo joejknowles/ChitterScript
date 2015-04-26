@@ -30,7 +30,7 @@ body * {
   width: 30%;
 }
 .cheeps-container {
-  height: 100%;
+  min-height: 100%;
   width: 60%;
   display: inline-block;
   float: left;
