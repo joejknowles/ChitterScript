@@ -4,4 +4,5 @@ class Cheep
   property :message, Text
   property :created_at, Time
   has 1, :user, through: Resource
+  has n, :smiles
 end

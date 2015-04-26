@@ -1,0 +1,18 @@
+<div id="message"><%= erb :welcome_back if user %></div>
+<form class="register" id="register"<%= 'hidden' if current_user %>>
+  <label for="register-username">Username:</label>
+  <input id="register-username" type="text" name="username">
+  <label for="register-password">Password:</label>
+  <input id="register-password" type="password" name="password">
+  <button id="register-button">Register</button>
+</form>
+<form class="sign-in" id="sign-in" <%= 'hidden' if current_user %>>
+  <label for="sign-in-username">Username:</label>
+  <input id="sign-in-username" type="text" name="username">
+  <label for="sign-in-password">Password:</label>
+  <input id="sign-in-password" type="password" name="password">
+  <button id="sign-in-button">Sign in</button>
+</form>
+<form class="sign-out" id="sign-out" <%= 'hidden' unless current_user %>>
+  <button id="sign-out-button">Sign out</button>
+</form>

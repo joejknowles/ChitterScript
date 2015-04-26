@@ -75,3 +75,28 @@ end
 Given(/^I sign in with incorrect details$/) do
   sign_in(password: 'blah')
 end
+
+Then(/^I see (\d+)$/) do |number|
+  expect(page).not_to have_content number
+end
+
+When(/^I click smile$/) do
+  find('.smiles__img').click
+end
+
+Then(
+  /^I see "([^\"]*)" within "([^\"]*)"?$/
+) do |text, selector|
+  element = find(selector)
+  expect(element).to have_content text
+end
+
+When(/^(.*) ten times$/) do |first_step|
+  10.times { step first_step }
+end
+
+When(/^I press "([^"]*)" button$/) do |button|
+  click_button button
+end
+
+

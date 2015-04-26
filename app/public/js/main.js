@@ -5,11 +5,6 @@ var $cheep_form = $('#send-cheep')
 
 if ($('#username').length > 0) {
   window.session = new Session($(this).text);
-  $register_form.hide();
-  $sign_in_form.hide();
-} else {
-  $sign_out_form.hide();
-  $cheep_form.hide();
 }
 
 $register_form.on('submit', function (event) {
@@ -48,9 +43,6 @@ $sign_in_form.on('submit', function (event) {
     window.session = new Session(username)
   }).fail(function (data) {
     $('#message').text(data.responseText);
-    // for(var o in data) {
-    //   alert(o + ' ' + data[o]);
-    // } .statusText
   });
   return false;
 });

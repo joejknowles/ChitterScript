@@ -1,9 +1,15 @@
 <div class="cheep-author">
   <%= cheep.user.username %> cheeped:
 </div>
-<div class="cheep-time">
-  <%= "#{(Time.now - cheep.created_at).floor / 60}m" %>
-</div>
 <div class="cheep-message">
   <%= cheep.message %>
 </div>
+<div class="cheep-time">
+  <%= "#{(Time.now - cheep.created_at).floor / 60}m" %>
+</div>
+<form action="/smile" method="post">
+  <input type="hidden" name="cheep_id" value="<%= cheep.id %>">
+  <input type="image" class="smiles__img smiles__img--<%= smile(cheep) %>" src="/images/blank.png" data-cheep-id="<%= cheep.id %>">
+</form>
+<span class="smiles__number"><%= cheep.smiles.length %></span>
+<span class="clear"></span>

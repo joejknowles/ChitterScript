@@ -1,0 +1,91 @@
+body * {
+  font-family: HelveticaNeue;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.a-cheep * {
+  text-align: left;
+}
+.a-cheep {
+  margin: 0.75em 0;
+  border-style: solid;
+  border-width: 0.08em;
+  border-color: black;
+  padding:0.75em;
+
+}
+.cheep-time {
+  float:left;
+  display: inline-block;
+}
+.sidebar {
+  margin: 0;
+  display: inline-block;
+  float: right;
+  border-style: solid;
+  border-width: 0.08em;
+  border-color: black;
+  padding:0.75em;
+  height: 100%;
+  width: 30%;
+}
+.cheeps-container {
+  height: 100%;
+  width: 60%;
+  display: inline-block;
+  float: left;
+  border-style: solid;
+  border-width: 0.08em;
+  border-color: black;
+  padding:0.75em;
+  padding-top: 0;
+}
+#cheeps-wrapper, #send-cheep {
+  display: block;
+}
+
+#main {
+  width: 70%;
+  margin: 0.75em auto;
+  height: 100%;
+}
+
+.smiles__img {
+  color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+  border: none;
+  float: right;
+  height: 20px;
+  width: 20px;
+  border-style: none;
+}
+.smiles__img--smile {
+  background: url(/images/smile_sprites.png) 20px 0;
+}
+.smiles__img--smile:hover {
+  background: url(/images/smile_sprites.png) 0 0;
+}
+
+.smiles__img--indifferent {
+  background: url(/images/smile_sprites.png) 0 0;
+}
+.smiles__img--indifferent:hover {
+  background: url(/images/smile_sprites.png) 20px 0;
+}
+
+.smiles__img:focus {
+  outline: none;
+}
+
+.smiles__number {
+  float:right;
+  margin:0 0.3em;
+}
+
+.clear {
+  clear: both;
+  display: block;
+}
+label {
+  visibility: hidden;
+}

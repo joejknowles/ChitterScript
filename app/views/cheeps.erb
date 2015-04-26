@@ -1,5 +1,7 @@
 <div id="cheeps-wrapper">
   <% cheeps.reverse.each do |cheep| %>
-    <%= erb :cheep, layout: false, locals: { cheep: cheep } %>
+    <div class="a-cheep">
+      <%= erb :cheep, layout: false, locals: { cheep: cheep } %>
+    </div>
   <% end %>
 </div>

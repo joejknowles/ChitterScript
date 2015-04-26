@@ -1,23 +1,11 @@
-<form class="register" id="register">
-  <label for="register-username">Username:</label>
-  <input id="register-username" type="text" name="username">
-  <label for="register-password">Password:</label>
-  <input id="register-password" type="password" name="password">
-  <button id="register-button">Register</button>
-</form>
-<form class="sign-in" id="sign-in">
-  <label for="sign-in-username">Username:</label>
-  <input id="sign-in-username" type="text" name="username">
-  <label for="sign-in-password">Password:</label>
-  <input id="sign-in-password" type="password" name="password">
-  <button id="sign-in-button">Sign in</button>
-</form>
-<form class="sign-out" id="sign-out">
-  <button id="sign-out-button">Sign out</button>
-</form>
-<form class="send-cheep" id="send-cheep">
-  <label for="enter-cheep">Send Cheep</label>
-  <input id="enter-cheep" type="text" name="cheep">
-  <button id="cheep-button">Cheep</button>
-</form>
-<%= erb :cheeps, locals: { cheeps: @cheeps } %>
+<div class="cheeps-container">
+  <form class="send-cheep" id="send-cheep" <%= 'style="display:none;"' unless current_user %>>
+    <label for="enter-cheep" >Send Cheep</label>
+    <input id="enter-cheep" type="text" name="cheep">
+    <button id="cheep-button">Cheep</button>
+  </form>
+  <%= erb :cheeps, locals: { cheeps: @cheeps } %>
+</div>
+<div class="sidebar">
+  <%= erb :_sidebar, locals: { user: @user } %>
+</div>
